@@ -1,0 +1,4 @@
+# No external dependencies required
+# This project uses only Python standard library modules:
+# - socket (for network communication)
+# - threading (for handling multiple clients)
