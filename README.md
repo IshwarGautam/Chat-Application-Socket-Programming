@@ -1,6 +1,6 @@
 # Socket Programming Chat Application
 
-A simple multi-client chat application built with Python socket programming.
+A simple multi-client chat application built with Python socket programming, available in both terminal and GUI versions.
 
 ## Features
 
@@ -8,6 +8,8 @@ A simple multi-client chat application built with Python socket programming.
 - **Real-time messaging**: Messages are broadcast to all connected clients instantly
 - **User nicknames**: Each client chooses a unique nickname
 - **Connection notifications**: Users are notified when someone joins/leaves
+- **GUI Interface**: Easy-to-use graphical interface with server monitoring
+- **Active Client Tracking**: Server GUI shows all connected clients in real-time
 
 ## How It Works
 
@@ -26,23 +28,39 @@ A simple multi-client chat application built with Python socket programming.
 
 ## Usage
 
-### 1. Start the Server
+### Terminal Version
+
+#### 1. Start the Server
 ```bash
 python server.py
 ```
-The server will start listening on localhost:12345
 
-### 2. Connect Clients
-Open new terminal windows and run:
+#### 2. Connect Clients
 ```bash
 python client.py
 ```
-Each client will prompt for a nickname, then you can start chatting!
 
-### 3. Chat
-- Type messages and press Enter to send
-- Messages appear as: `nickname: message`
-- Join/leave notifications are automatically broadcast
+### GUI Version (Recommended)
+
+#### 1. Start the Server GUI
+```bash
+python server_gui.py
+```
+- Click "Start Server" button
+- Monitor active clients and server logs in real-time
+
+#### 2. Connect Client GUIs
+```bash
+python client_gui.py
+```
+- Click "Connect" and enter your nickname
+- Start chatting in the message box
+- Press Enter or click "Send" to send messages
+
+### Features:
+- **Server GUI**: Shows active clients list and message logs
+- **Client GUI**: Clean chat interface with connect/disconnect buttons
+- **Real-time Updates**: Instant message delivery and client status updates
 
 ## Technical Details
 
@@ -79,5 +97,10 @@ Bob: Hi Alice!
 
 ## Stopping the Application
 
+### Terminal Version:
 - **Server**: Press Ctrl+C to stop the server
 - **Client**: Press Ctrl+C to disconnect from chat
+
+### GUI Version:
+- **Server**: Click "Stop Server" button or close window
+- **Client**: Click "Disconnect" button or close window
